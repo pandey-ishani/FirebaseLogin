@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Firebase Login</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+</head>
+<body>
+
+<div class="main-div" id="login_div">
+	<h3>Admin Login</h3>
+	<p>Login tab for HUL employees.</p>
+	<input type="email" placeholder="Email" id="email_field">
+	<input type="password" placeholder="Password" id="password_field">
+	<button onclick="login()">Login</button>
+
+</div>
+
+<div id="user_div" class="loggedin-div">
+	<h3>You are currently logged in.</h3>
+	<p id="user_para"></p>
+	<p>Monitor Returns ->></p>
+
+	<button onclick="logout()">Logout</button>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyABrSrozOtJH21imKIYdR4_m6vW5NZJiCg",
+    authDomain: "login-sample-9bf54.firebaseapp.com",
+    databaseURL: "https://login-sample-9bf54.firebaseio.com",
+    projectId: "login-sample-9bf54",
+    storageBucket: "",
+    messagingSenderId: "301699017012"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script src="index.js"></script>
+</body>
+</html>
